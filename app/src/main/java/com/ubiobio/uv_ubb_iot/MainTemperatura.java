@@ -75,13 +75,15 @@ public class MainTemperatura extends AppCompatActivity {
 
         DecoView decoView = (DecoView) findViewById(R.id.dynamicArcViewTemperatura);
         decoView.deleteAll();
-        decoView.configureAngles(180,0);
+        decoView.configureAngles(220,0);
 
         //Background
 
-        int backIndex = decoView.addSeries(new SeriesItem.Builder(Color.parseColor("#55BDBDBB"))
+        int backIndex = decoView.addSeries(new SeriesItem.Builder(Color.parseColor("#99BDBDBD"))
                 .setRange(valorMinimo, valorMaximo, valorMinimo)
-                .setChartStyle(SeriesItem.ChartStyle.STYLE_LINE_VERTICAL)
+                .setChartStyle(SeriesItem.ChartStyle.STYLE_DONUT)
+                .setSpinClockwise(false)
+
 
                 .setCapRounded(false)
                 .setLineWidth(180f)
@@ -99,6 +101,7 @@ public class MainTemperatura extends AppCompatActivity {
                         .setCapRounded(false)
                         .setInitialVisibility(false)
                         .setInset(new PointF(-30f, -30f))
+
 
                         .setChartStyle(SeriesItem.ChartStyle.STYLE_DONUT)
                         .build());
@@ -123,11 +126,13 @@ public class MainTemperatura extends AppCompatActivity {
                 .setIndex(seriesIndexProm)
                 .setDuration(1000)
                 .build());
+
         //se cambia el back
         decoView.addEvent(new DecoEvent.Builder(valorMaximo)
                 .setIndex(backIndex)
                 .setDuration(1000)
                 .build());
+
         decoView.addEvent(new DecoEvent.Builder(valor)
                 .setIndex(seriesIndexValor)
                 .setDuration(1000)

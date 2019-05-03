@@ -2,6 +2,7 @@ package com.ubiobio.uv_ubb_iot;
 
 import android.graphics.Color;
 import android.graphics.PointF;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,6 +35,7 @@ public class MainHumedad extends AppCompatActivity {
     final int  UV_SENSOR = 100;
     final int  TEMPERATURA_SENSOR = 101;
     final int  HUMEDAD_SENSOR = 102;
+    private Button btnUpdate;
     int valor;
     int valorPromedio;
     int valorMinimo;
@@ -45,7 +47,7 @@ public class MainHumedad extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_humedad);
 
-        Button btnUpdate = findViewById(R.id.btnActualizarHumedad);
+        btnUpdate = findViewById(R.id.btnActualizarHumedad);
         btnUpdate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -215,11 +217,11 @@ String date = df.format(Calendar.getInstance().getTime());
                     public void onResponse(String response) {
                         try {
                             JSONObject JsonResponse = new JSONObject(response);
-                            /*SnackBar.make(MainActivity.this.getCurrentFocus(), responseJson.getString("info"), Snackbar.LENGTH_LONG)
-                                    .show();
-*/
-                            JSONArray data = JsonResponse.getJSONArray("data");
                             Log.d("LOGWS",response);
+
+
+                            JSONArray data = JsonResponse.getJSONArray("data");
+
                             datos.clear();
                             for (int i=0; i<data.length(); i++) {
                                 datos.add(i,data.getJSONObject(i).getInt("valor"));

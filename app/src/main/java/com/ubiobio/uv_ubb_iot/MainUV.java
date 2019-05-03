@@ -79,7 +79,7 @@ public class MainUV extends AppCompatActivity {
 
         //Background
 
-        int backIndex = decoView.addSeries(new SeriesItem.Builder(Color.parseColor("#55BDBDBB"))
+        int backIndex = decoView.addSeries(new SeriesItem.Builder(Color.parseColor("#55BDBDBD"))
                 .setRange(valorMinimo, valorMaximo, valorMinimo)
                 .setChartStyle(SeriesItem.ChartStyle.STYLE_DONUT)
                 .setCapRounded(true)
