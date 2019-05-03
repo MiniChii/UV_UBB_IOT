@@ -11,4 +11,7 @@
     <string name="temperatura">Temperatura</string>
     <string name="humedad">Humedad</string>
     <string name="mensajeSalida">¿Está seguro que quiere salir?</string>
+    <string name="cerrarApp">Cerrar Aplicación</string>
+    <string name="si">Sí</string>
+    <string name="no">No</string>
 </resources>

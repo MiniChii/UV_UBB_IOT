@@ -73,13 +73,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-/*
+
     @Override
     public void onBackPressed(){
-        AlertDialog.Builder builder = new AlertDialog.Builder(getApplication());
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(R.string.mensajeSalida)
-                .setTitle("Cerrar Aplicación")
-                .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                .setTitle(R.string.cerrarApp)
+                .setPositiveButton(R.string.si, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         finish();
@@ -87,17 +87,17 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 })
-                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
 
                     }
                 });
         AlertDialog dialog = builder.create();
-
+        dialog.show();
 
 
     }
-    */
+
 
 }
