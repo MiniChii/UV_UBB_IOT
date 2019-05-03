@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -66,6 +67,11 @@ public class MainUV extends AppCompatActivity {
 
     private void actualizarChart() {
         valorPromedio=calcularPromedio(datos);
+
+        TextView valorTV = findViewById(R.id.valorUvId);
+        TextView promTV = findViewById(R.id.promUvId);
+        valorTV.setText("Actual: "+valor);
+        promTV.setText("Promedio: "+valorPromedio);
 
         DecoView decoView = (DecoView) findViewById(R.id.dynamicArcView);
         decoView.deleteAll();

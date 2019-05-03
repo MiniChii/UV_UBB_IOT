@@ -7,16 +7,26 @@
     tools:context=".MainActivity"
     android:background="@drawable/fondo_bonito"
     >
-
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="#AA000000"
+        app:title="@string/app_name"
+        app:titleTextColor="@color/White"
+        android:textAlignment="center"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        />
 
     <Button
         android:id="@+id/btnTemp"
 
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
+
         android:layout_alignTop="@id/btnTemp"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="35dp"
 
         app:layout_constraintBottom_toTopOf="@+id/btnUv"
         app:layout_constraintEnd_toEndOf="parent"
@@ -24,7 +34,10 @@
         app:layout_constraintStart_toStartOf="parent"
 
         android:text="@string/temperatura"
-        android:textSize="20sp"
+        android:textSize="20dp"
+
+
+        android:background="@drawable/rounded_corner"
 
         />
 
@@ -32,7 +45,7 @@
         android:id="@+id/btnUv"
 
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,17 +53,19 @@
         app:layout_constraintTop_toTopOf="parent"
 
         android:text="@string/radiacionUv"
-        android:textSize="20sp"
+        android:textSize="20dp"
 
+
+        android:background="@drawable/rounded_corner"
         />
 
 
     <Button
         android:id="@+id/btnHum"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
 
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="35dp"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -58,7 +73,13 @@
         app:layout_constraintTop_toBottomOf="@+id/btnUv"
 
         android:text="@string/humedad"
-        android:textSize="20sp"
+        android:textSize="20dp"
+
+
+
+        android:background="@drawable/rounded_corner"
+
+
         />
 
 

@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_bonito"
+    android:background="@drawable/temperatura"
     tools:context=".MainTemperatura">
 
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="@color/Blue"
-        app:title="Temperatura"
+        android:background="#AA000000"
+        app:title="@string/temperatura"
         app:titleTextColor="@color/White"
         android:textAlignment="center"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
@@ -34,11 +34,12 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_alignBottom="@id/dynamicArcViewTemperatura"
-        android:background="#55FFFFFF"
+        android:background="@drawable/rounded_corner_dark"
 
 
         >
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/valorTempId"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:textAlignment="center"
@@ -48,6 +49,7 @@
 
             />
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/promTempId"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:textAlignment="center"
@@ -60,10 +62,12 @@
 
     <Button
         android:id="@+id/btnActualizarTemperatura"
-        android:layout_width="match_parent"
+        android:layout_width="250dp"
+        android:layout_centerHorizontal="true"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="10dp"
+        android:background="@drawable/rounded_corner"
 
         android:text="Actualizar"/>
 

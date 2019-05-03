@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -63,6 +64,11 @@ public class MainHumedad extends AppCompatActivity {
 
     private void actualizarChart() {
         valorPromedio=calcularPromedio(datos);
+
+        TextView valorTV = findViewById(R.id.valorHumId);
+        TextView promTV = findViewById(R.id.promHumId);
+        valorTV.setText("Actual: "+valor);
+        promTV.setText("Promedio: "+valorPromedio);
 
         DecoView decoView = (DecoView) findViewById(R.id.dynamicArcViewHumedad);
         decoView.deleteAll();

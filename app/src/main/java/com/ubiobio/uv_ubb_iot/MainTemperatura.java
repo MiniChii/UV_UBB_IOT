@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -64,6 +65,13 @@ public class MainTemperatura extends AppCompatActivity {
 
     private void actualizarChart() {
         valorPromedio=calcularPromedio(datos);
+
+        TextView valorTV = findViewById(R.id.valorTempId);
+        TextView promTV = findViewById(R.id.promTempId);
+        valorTV.setText("Actual: "+valor);
+        promTV.setText("Promedio: "+valorPromedio);
+
+
 
         DecoView decoView = (DecoView) findViewById(R.id.dynamicArcViewTemperatura);
         decoView.deleteAll();
