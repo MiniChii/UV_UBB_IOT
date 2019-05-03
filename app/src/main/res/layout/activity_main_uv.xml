@@ -16,6 +16,7 @@
         android:textAlignment="center"
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         />
+
     <com.hookedonplay.decoviewlib.DecoView
         xmlns:custom="http://schemas.android.com/apk/res-auto"
 
@@ -25,6 +26,40 @@
         android:layout_marginTop="10dp"
         android:layout_centerInParent="true"
         />
+
+
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_alignBottom="@id/dynamicArcView"
+        android:background="#55FFFFFF"
+
+
+        >
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/Orange"
+            android:text="Actual"
+
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/Green"
+            android:text="Promedio"
+
+            />
+    </android.support.v7.widget.LinearLayoutCompat>
+
 
     <Button
         android:id="@+id/btnActualizar"

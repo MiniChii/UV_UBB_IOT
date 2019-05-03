@@ -66,18 +66,14 @@ public class MainHumedad extends AppCompatActivity {
 
         DecoView decoView = (DecoView) findViewById(R.id.dynamicArcViewHumedad);
         decoView.deleteAll();
-        decoView.configureAngles(180,0);
+        decoView.configureAngles(360,0);
 
         //Background
 
-        int backIndex = decoView.addSeries(new SeriesItem.Builder(Color.parseColor("#BDBDBDBB"))
+        int backIndex = decoView.addSeries(new SeriesItem.Builder(Color.parseColor("#55BDBDBD"))
                 .setRange(valorMinimo, valorMaximo, valorMinimo)
                 .setChartStyle(SeriesItem.ChartStyle.STYLE_DONUT)
-                .setSeriesLabel(new SeriesLabel.Builder("Valor actual: %.0f")
-                        .setColorBack(Color.argb(180, 0, 0, 0))
-                        .setColorText(Color.argb(255, 255, 255, 255))
 
-                        .build())
                 .setCapRounded(false)
                 .setLineWidth(180f)
                 .build()
@@ -89,10 +85,9 @@ public class MainHumedad extends AppCompatActivity {
                 new SeriesItem.Builder(getResources().getColor(R.color.LightBlue),
                         getResources().getColor(R.color.Blue))
                         .setRange(valorMinimo, valorMaximo, valorMinimo)
-                        .setInitialVisibility(false)
+
                         .setLineWidth(100f)
                         .setCapRounded(false)
-                        .setInitialVisibility(false)
                         .setInset(new PointF(-30f, -30f))
 
 
@@ -110,23 +105,24 @@ public class MainHumedad extends AppCompatActivity {
                         .setCapRounded(false)
                         .setInset(new PointF(50f, 50f))
                         .setChartStyle(SeriesItem.ChartStyle.STYLE_DONUT)
-                        .setSeriesLabel(new SeriesLabel.Builder("Promedio diario: %.0f")
-                                .setColorBack(Color.argb(180, 0, 0, 0))
-                                .setColorText(Color.argb(255, 255, 255, 255))
-                                .build())
+
                         .build())
 
                 ;
         //cambia al promedio
         decoView.addEvent(new DecoEvent.Builder(valorPromedio)
+                .setDuration(1000)
+                .setDisplayText("")
                 .setIndex(seriesIndexProm)
                 .build());
         //se cambia el back
         decoView.addEvent(new DecoEvent.Builder(valorMaximo)
                 .setIndex(backIndex)
+                .setDuration(1000)
                 .build());
         decoView.addEvent(new DecoEvent.Builder(valor)
                 .setIndex(seriesIndexValor)
+                .setDuration(1000)
                 .build());
 
     }

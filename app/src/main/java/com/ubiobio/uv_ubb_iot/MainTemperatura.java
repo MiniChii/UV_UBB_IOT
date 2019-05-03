@@ -71,9 +71,9 @@ public class MainTemperatura extends AppCompatActivity {
 
         //Background
 
-        int backIndex = decoView.addSeries(new SeriesItem.Builder(Color.parseColor("#BDBDBDBB"))
+        int backIndex = decoView.addSeries(new SeriesItem.Builder(Color.parseColor("#55BDBDBB"))
                 .setRange(valorMinimo, valorMaximo, valorMinimo)
-                .setChartStyle(SeriesItem.ChartStyle.STYLE_DONUT)
+                .setChartStyle(SeriesItem.ChartStyle.STYLE_LINE_VERTICAL)
 
                 .setCapRounded(false)
                 .setLineWidth(180f)
@@ -83,7 +83,7 @@ public class MainTemperatura extends AppCompatActivity {
 
         //IntentoDeGradiente
         int seriesIndexValor = decoView.addSeries(
-                new SeriesItem.Builder(getResources().getColor(R.color.LightSkyBlue),
+                new SeriesItem.Builder(getResources().getColor(R.color.DeepSkyBlue),
                         getResources().getColor(R.color.Coral))
                         .setRange(valorMinimo, valorMaximo, valorMinimo)
                         .setInitialVisibility(false)
@@ -91,11 +91,6 @@ public class MainTemperatura extends AppCompatActivity {
                         .setCapRounded(false)
                         .setInitialVisibility(false)
                         .setInset(new PointF(-30f, -30f))
-                        .setSeriesLabel(new SeriesLabel.Builder("Valor actual: %.0f")
-                                .setColorBack(Color.argb(180, 0, 0, 0))
-                                .setColorText(Color.argb(255, 255, 255, 255))
-
-                                .build())
 
                         .setChartStyle(SeriesItem.ChartStyle.STYLE_DONUT)
                         .build());
@@ -111,23 +106,23 @@ public class MainTemperatura extends AppCompatActivity {
                         .setCapRounded(false)
                         .setInset(new PointF(50f, 50f))
                         .setChartStyle(SeriesItem.ChartStyle.STYLE_DONUT)
-                        .setSeriesLabel(new SeriesLabel.Builder("Promedio diario: %.0f")
-                                .setColorBack(Color.argb(180, 0, 0, 0))
-                                .setColorText(Color.argb(255, 255, 255, 255))
-                                .build())
+
                         .build())
 
                 ;
         //cambia al promedio
         decoView.addEvent(new DecoEvent.Builder(valorPromedio)
                 .setIndex(seriesIndexProm)
+                .setDuration(1000)
                 .build());
         //se cambia el back
         decoView.addEvent(new DecoEvent.Builder(valorMaximo)
                 .setIndex(backIndex)
+                .setDuration(1000)
                 .build());
         decoView.addEvent(new DecoEvent.Builder(valor)
                 .setIndex(seriesIndexValor)
+                .setDuration(1000)
                 .build());
 
     }

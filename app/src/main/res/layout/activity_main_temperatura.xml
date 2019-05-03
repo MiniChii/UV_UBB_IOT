@@ -27,6 +27,37 @@
         android:layout_centerInParent="true"
         />
 
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_alignBottom="@id/dynamicArcViewTemperatura"
+        android:background="#55FFFFFF"
+
+
+        >
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/Blue"
+            android:text="Actual"
+
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textColor="@color/Green"
+            android:text="Promedio"
+
+            />
+    </android.support.v7.widget.LinearLayoutCompat>
+
     <Button
         android:id="@+id/btnActualizarTemperatura"
         android:layout_width="match_parent"
