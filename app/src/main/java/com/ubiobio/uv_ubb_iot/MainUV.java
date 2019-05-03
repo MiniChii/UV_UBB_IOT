@@ -70,8 +70,8 @@ public class MainUV extends AppCompatActivity {
 
         TextView valorTV = findViewById(R.id.valorUvId);
         TextView promTV = findViewById(R.id.promUvId);
-        valorTV.setText("Actual: "+valor);
-        promTV.setText("Promedio: "+valorPromedio);
+        valorTV.setText("Actual: "+valor+" nm");
+        promTV.setText("Promedio: "+valorPromedio+" nm");
 
         DecoView decoView = (DecoView) findViewById(R.id.dynamicArcView);
         decoView.deleteAll();

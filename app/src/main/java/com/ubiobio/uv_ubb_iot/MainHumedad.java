@@ -67,8 +67,8 @@ public class MainHumedad extends AppCompatActivity {
 
         TextView valorTV = findViewById(R.id.valorHumId);
         TextView promTV = findViewById(R.id.promHumId);
-        valorTV.setText("Actual: "+valor);
-        promTV.setText("Promedio: "+valorPromedio);
+        valorTV.setText("Actual: "+valor+"%");
+        promTV.setText("Promedio: "+valorPromedio+"%");
 
         DecoView decoView = (DecoView) findViewById(R.id.dynamicArcViewHumedad);
         decoView.deleteAll();

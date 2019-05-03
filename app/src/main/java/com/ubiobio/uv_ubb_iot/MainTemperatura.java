@@ -68,8 +68,8 @@ public class MainTemperatura extends AppCompatActivity {
 
         TextView valorTV = findViewById(R.id.valorTempId);
         TextView promTV = findViewById(R.id.promTempId);
-        valorTV.setText("Actual: "+valor);
-        promTV.setText("Promedio: "+valorPromedio);
+        valorTV.setText("Actual: "+valor+"°C");
+        promTV.setText("Promedio: "+valorPromedio+"°C");
 
 
 

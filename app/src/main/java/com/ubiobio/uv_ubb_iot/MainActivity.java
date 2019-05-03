@@ -1,7 +1,9 @@
 package com.ubiobio.uv_ubb_iot;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -70,9 +72,32 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+    }
+/*
+    @Override
+    public void onBackPressed(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(getApplication());
+        builder.setMessage(R.string.mensajeSalida)
+                .setTitle("Cerrar Aplicación")
+                .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finish();
+
+
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+        AlertDialog dialog = builder.create();
 
 
 
     }
+    */
 
 }

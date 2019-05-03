@@ -10,4 +10,5 @@
     <string name="radiacionUv">Radiación UV</string>
     <string name="temperatura">Temperatura</string>
     <string name="humedad">Humedad</string>
+    <string name="mensajeSalida">¿Está seguro que quiere salir?</string>
 </resources>
